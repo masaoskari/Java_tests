@@ -38,18 +38,16 @@ public class App
                     informationString.append(scanner.nextLine());
                 }
                 scanner.close();
-                //System.out.println(informationString.toString());
+                System.out.println(informationString.toString());
                 String json = informationString.toString();
                 JsonParser parser = new JsonParser();
                 JsonElement jsonTree = parser.parse(json);
                 JsonObject jsonObject = jsonTree.getAsJsonObject();
                 JsonElement results = jsonObject.getAsJsonArray("searchResults");
-                
+                System.out.print("ASD");
                 Gson gson = new Gson();
                 Program[] program = gson.fromJson(results, Program[].class);
-                for (Program prog : program){
-                    System.out.println(prog.toString());
-                }
+
             }
         }
         catch (Exception e){
