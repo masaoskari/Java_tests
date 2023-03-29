@@ -50,6 +50,7 @@ public class App
                 for (Program prog : program){
                     System.out.println(prog.toString());
                 }
+
             }
         }
         catch (Exception e){
